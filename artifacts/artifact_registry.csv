@@ -1,0 +1,23 @@
+artifact_id,stage,path,purpose,status
+A-001,T00,memos/T00_closure_memo.md,analytical contract,complete
+A-002,T00,memos/decision_log.md,durable method decisions,complete
+A-101,T01,artifacts/generated/data/file_inventory.csv,raw file inventory,planned
+A-102,T01,artifacts/generated/data/schema_audit.csv,schema and type audit,planned
+A-103,T01,artifacts/generated/data/data_quality_table.csv,quality checks,planned
+A-104,T01,artifacts/generated/data/target_profile.csv,target distribution,planned
+A-105,T01,artifacts/generated/data/duplicate_audit.csv,entity and duplicate audit,planned
+A-106,T01,artifacts/generated/data/temporal_coverage.csv,date coverage and reference date,planned
+A-107,T01,artifacts/generated/data/feature_timing_register.csv,observed feature timing,planned
+A-108,T01,artifacts/generated/data/limitations_register.csv,limitations and mitigations,planned
+A-201,T02,artifacts/generated/eda/hypothesis_register.csv,hypothesis status,planned
+A-202,T02,artifacts/generated/eda/finding_register.csv,decision-relevant findings,planned
+A-203,T02,artifacts/generated/figures/topics_language.png,required segment figure,planned
+A-204,T02,artifacts/generated/figures/age_stars.png,required age figure,planned
+A-301,T03,artifacts/generated/modeling/model_comparison.csv,candidate comparison,planned
+A-302,T03,artifacts/generated/modeling/validation_predictions.csv,row-level validation evidence,planned
+A-303,T03,artifacts/generated/modeling/segment_error.csv,error segmentation,planned
+A-401,T04,artifacts/generated/submission/submission.csv,challenge submission,planned
+A-402,T04,artifacts/generated/submission/submission_validation.json,submission checks,planned
+A-403,T04,artifacts/generated/policy/sensitivity_comparison.csv,proxy sensitivity,planned
+A-501,T05,artifacts/generated/handoff/human_brief.md,human evidence briefing,planned
+A-502,T05,artifacts/generated/handoff/presentation_evidence_map.csv,claim-to-artifact map,planned

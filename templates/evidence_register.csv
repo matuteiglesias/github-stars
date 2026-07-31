@@ -1,0 +1,2 @@
+evidence_id,stage,question,artifact_path,claim,magnitude_or_result,caveat,decision_supported,status
+E-000,T00,What problem are we solving?,memos/T00_closure_memo.md,Contemporaneous star estimation rather than future forecasting,Analytical contract established,Subject to raw-file contradiction,Unlock T01,confirmed
