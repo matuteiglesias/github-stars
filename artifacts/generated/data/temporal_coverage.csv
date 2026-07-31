@@ -1,0 +1,7 @@
+dataset,date_field,minimum,maximum,invalid_count,reference_date_candidate,notes
+github-repo-data.csv,Created At,2007-10-29T14:37:16+00:00,2023-09-24T11:21:54+00:00,0,2023-09-24,UTC timestamps parsed with ISO-8601
+github-repo-data.csv,Updated At,2019-07-11T14:13:20+00:00,2023-09-25T19:38:08+00:00,0,2023-09-25,UTC timestamps parsed with ISO-8601
+github-repo-prediction-set.csv,Created At,2008-01-14T14:51:56+00:00,2023-09-22T00:22:01+00:00,0,2023-09-22,UTC timestamps parsed with ISO-8601
+github-repo-prediction-set.csv,Updated At,2019-08-13T13:26:10+00:00,2023-09-25T19:30:16+00:00,0,2023-09-25,UTC timestamps parsed with ISO-8601
+all feature datasets,fixed age reference,,2023-09-25,0,2023-09-25,Latest observed valid Updated At; deterministic snapshot-date proxy
+train vs prediction,Created At date overlap,2008-01-14,2023-09-22,0,2023-09-25,5338 shared calendar dates; chronology alone does not define partition

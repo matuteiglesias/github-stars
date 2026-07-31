@@ -1,0 +1,31 @@
+metric,value,notes
+count,150520,Stars in labeled dataset; linear scale
+missing_count,0,Stars in labeled dataset; linear scale
+zero_count,0,Stars in labeled dataset; linear scale
+zero_rate,0.0,Stars in labeled dataset; linear scale
+negative_count,0,Stars in labeled dataset; linear scale
+minimum,167.0,Stars in labeled dataset; linear scale
+p01,169.0,Stars in labeled dataset; linear scale
+p10,190.0,Stars in labeled dataset; linear scale
+p25,237.0,Stars in labeled dataset; linear scale
+median,378.0,Stars in labeled dataset; linear scale
+p75,800.0,Stars in labeled dataset; linear scale
+p90,2029.0,Stars in labeled dataset; linear scale
+p95,3788.05,Stars in labeled dataset; linear scale
+p99,12819.24,Stars in labeled dataset; linear scale
+mean,1117.16931305,Stars in labeled dataset; linear scale
+maximum,298393.0,Stars in labeled dataset; linear scale
+log1p_minimum,5.12396398,natural-log scale
+log1p_median,5.93753621,natural-log scale
+log1p_mean,6.22114645,natural-log scale
+log1p_maximum,12.60617004,natural-log scale
+extreme_rank_1,298393,stable URL=https://github.com/EbookFoundation/free-programming-books; source_row=35447
+extreme_rank_2,269997,stable URL=https://github.com/sindresorhus/awesome; source_row=93064
+extreme_rank_3,267901,stable URL=https://github.com/996icu/996.ICU; source_row=54854
+extreme_rank_4,256615,stable URL=https://github.com/public-apis/public-apis; source_row=134201
+extreme_rank_5,229569,stable URL=https://github.com/donnemartin/system-design-primer; source_row=82959
+extreme_rank_6,217627,stable URL=https://github.com/codecrafters-io/build-your-own-x; source_row=69672
+extreme_rank_7,213299,stable URL=https://github.com/facebook/react; source_row=105288
+extreme_rank_8,205326,stable URL=https://github.com/vuejs/vue; source_row=111374
+extreme_rank_9,175401,stable URL=https://github.com/trekhleb/javascript-algorithms; source_row=99183
+extreme_rank_10,171274,stable URL=https://github.com/getify/You-Dont-Know-JS; source_row=69066
