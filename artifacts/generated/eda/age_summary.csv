@@ -1,0 +1,9 @@
+age_band_years,count,median_log1p_stars,p25_log1p_stars,p75_log1p_stars,median_stars,missing_created_at_count,reference_date,age_definition
+<1,5366,5.826,5.425,6.5103,338.0,0,2023-09-25,proxy age at reference date
+1–2,8040,5.8021,5.4072,6.4409,330.0,0,2023-09-25,proxy age at reference date
+2–3,10506,5.823,5.4161,6.4723,337.0,0,2023-09-25,proxy age at reference date
+3–5,30602,5.8665,5.4467,6.5381,352.0,0,2023-09-25,proxy age at reference date
+5–8,49540,5.9584,5.4848,6.7069,386.0,0,2023-09-25,proxy age at reference date
+8–12,39326,6.0307,5.5134,6.8522,415.0,0,2023-09-25,proxy age at reference date
+12–16,7140,6.107,5.5491,7.0414,448.0,0,2023-09-25,proxy age at reference date
+16+,0,,,,,0,2023-09-25,proxy age at reference date

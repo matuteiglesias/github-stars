@@ -55,7 +55,7 @@ TIMING = {
 def _write(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.DictWriter(handle, fieldnames=fieldnames)
+        writer = csv.DictWriter(handle, fieldnames=fieldnames, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
 
@@ -216,6 +216,13 @@ def run_audit(root: Path) -> None:
     all_updated = [_parse_date(row["Updated At"]) for data in frames.values() if "Updated At" in data["header"] for row in data["rows"] if row["Updated At"]]
     reference = max(value for value in all_updated if value is not None).date().isoformat()
     temporal.append({"dataset": "all feature datasets", "date_field": "fixed age reference", "minimum": "", "maximum": reference, "invalid_count": 0, "reference_date_candidate": reference, "notes": "Latest observed valid Updated At; deterministic snapshot-date proxy"})
+    reference_date = datetime.fromisoformat(reference).date()
+    created_after_reference = sum(
+        parsed.date() > reference_date
+        for data in frames.values() if "Created At" in data["header"]
+        for row in data["rows"] if (parsed := _parse_date(row["Created At"])) is not None
+    )
+    quality.append({"check": "Created At after fixed age reference", "dataset": "all feature datasets", "result": created_after_reference, "severity": "critical" if created_after_reference else "info", "evidence": f"{created_after_reference} Created At dates exceed {reference}", "implication": "Proxy age would be negative" if created_after_reference else "All proxy ages are non-negative"})
     train_dates = {_parse_date(row["Created At"]).date() for row in train_rows if _parse_date(row["Created At"])}
     pred_dates = {_parse_date(row["Created At"]).date() for row in pred_rows if _parse_date(row["Created At"])}
     temporal.append({"dataset": "train vs prediction", "date_field": "Created At date overlap", "minimum": min(train_dates & pred_dates).isoformat() if train_dates & pred_dates else "", "maximum": max(train_dates & pred_dates).isoformat() if train_dates & pred_dates else "", "invalid_count": 0, "reference_date_candidate": reference, "notes": f"{len(train_dates & pred_dates)} shared calendar dates; chronology alone does not define partition"})
@@ -227,6 +234,8 @@ def run_audit(root: Path) -> None:
         observed.append({"variable": variable, "observed_dtype": dtypes[variable], "semantic_role": semantic, "timing_class": timing, "production_use": production, "sensitivity_use": sensitivity, "leakage_risk": risk, "notes": "Classification applies to contemporaneous snapshot decision moment"})
 
     url_overlap = next(row["count"] for row in duplicates if row["check"] == "cross-file normalized URL overlap")
+    train_url_duplicates = next(row["count"] for row in duplicates if row["dataset_a"] == train_name and row["dataset_b"] == train_name and row["check"] == "duplicate normalized URLs")
+    prediction_url_duplicates = next(row["count"] for row in duplicates if row["dataset_a"] == pred_name and row["dataset_b"] == pred_name and row["check"] == "duplicate normalized URLs")
     name_unique_pred = len({row["Name"] for row in pred_rows}) == len(pred_rows)
     invalid_dates = sum(int(row["invalid_count"]) for row in temporal if row["dataset"] not in {"all feature datasets", "train vs prediction"})
     limitations = [
@@ -247,7 +256,7 @@ def run_audit(root: Path) -> None:
     _write(output/"data/feature_timing_register.csv", ["variable","observed_dtype","semantic_role","timing_class","production_use","sensitivity_use","leakage_risk","notes"], observed)
     _write(output/"data/limitations_register.csv", ["limitation","evidence","consequence","severity","mitigation","unresolved"], limitations)
 
-    critical = malformed_total or url_overlap or profile_metrics["negative_count"] or invalid_dates
+    critical = malformed_total or url_overlap or profile_metrics["negative_count"] or invalid_dates or created_after_reference
     status = "FAIL — blocked" if critical else "PASS — T02 and T03 preprocessing design unlocked"
     memo = f"""# T01 Closure Memo
 
@@ -270,9 +279,9 @@ All three CSV files under `data/raw/` were inspected without external data. `fil
 ## Decisions
 
 1. **Can the case proceed?** {status}.
-2. **Reliable entity key:** normalized `URL` is the audit identity candidate because it includes owner/repository context. It remains excluded from model features. Repeated normalized URLs must be grouped or otherwise controlled in validation if present.
+2. **Reliable entity key:** normalized `URL` is the audit identity candidate because it includes owner/repository context. It remains excluded from model features. Repeated normalized URLs are explicit: train={train_url_duplicates}, prediction={prediction_url_duplicates}. They must be grouped or otherwise controlled in validation if a future audit finds any.
 3. **Prediction order:** retain a zero-based internal row position from prediction-file load through scoring and write in unchanged source order. Never join predictions back on `Name` alone, regardless of apparent uniqueness.
-4. **Age reference:** {reference}, fixed as a documented proxy because no authoritative extraction field was supplied.
+4. **Age reference:** {reference}, fixed as a documented proxy because no authoritative extraction field was supplied. It defines proxy age at the reference date, not exact repository age at extraction. Created At values after this reference: {created_after_reference}.
 5. **Remaining leakage risks:** contemporaneous Forks, Issues, Updated At, Size, and lifecycle settings can be close or post-creation proxies; raw URL/Name can memorize identity. Full-model use must retain the snapshot interpretation, exclude raw URL, and be compared with an early-information sensitivity.
 6. **T00 assumptions:** the file roles, contemporaneous target, exact `Name,Stars` output shape, URL identity strategy, and row-order preservation are confirmed. An authoritative extraction date remains unconfirmed and is replaced provisionally by the fixed proxy. The partition mechanism and integer-output requirement remain unknown; useful prediction precision must be retained.
 
@@ -282,7 +291,7 @@ The limitations register records evidence, consequence, severity, mitigation, an
 
 ## Gate decision
 
-**{status}.** Critical issues are considered unresolved if any of: malformed CSV rows, normalized URL overlap, negative targets, or invalid dates is nonzero. No EDA chart and no model were produced.
+**{status}.** Critical issues are considered unresolved if any of: malformed CSV rows, normalized URL overlap, negative targets, invalid dates, or Created At dates after the reference is nonzero. Zero targets are valid for RMSLE; missing, negative, or non-finite targets are the relevant target-domain blockers. No EDA chart and no model were produced.
 """
     memo_path = output/"memos/T01_closure_memo.md"
     memo_path.parent.mkdir(parents=True, exist_ok=True)

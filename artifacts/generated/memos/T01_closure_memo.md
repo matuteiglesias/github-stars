@@ -19,9 +19,9 @@ All three CSV files under `data/raw/` were inspected without external data. `fil
 ## Decisions
 
 1. **Can the case proceed?** PASS — T02 and T03 preprocessing design unlocked.
-2. **Reliable entity key:** normalized `URL` is the audit identity candidate because it includes owner/repository context. It remains excluded from model features. Repeated normalized URLs must be grouped or otherwise controlled in validation if present.
+2. **Reliable entity key:** normalized `URL` is the audit identity candidate because it includes owner/repository context. It remains excluded from model features. Repeated normalized URLs are explicit: train=0, prediction=0. They must be grouped or otherwise controlled in validation if a future audit finds any.
 3. **Prediction order:** retain a zero-based internal row position from prediction-file load through scoring and write in unchanged source order. Never join predictions back on `Name` alone, regardless of apparent uniqueness.
-4. **Age reference:** 2023-09-25, fixed as a documented proxy because no authoritative extraction field was supplied.
+4. **Age reference:** 2023-09-25, fixed as a documented proxy because no authoritative extraction field was supplied. It defines proxy age at the reference date, not exact repository age at extraction. Created At values after this reference: 0.
 5. **Remaining leakage risks:** contemporaneous Forks, Issues, Updated At, Size, and lifecycle settings can be close or post-creation proxies; raw URL/Name can memorize identity. Full-model use must retain the snapshot interpretation, exclude raw URL, and be compared with an early-information sensitivity.
 6. **T00 assumptions:** the file roles, contemporaneous target, exact `Name,Stars` output shape, URL identity strategy, and row-order preservation are confirmed. An authoritative extraction date remains unconfirmed and is replaced provisionally by the fixed proxy. The partition mechanism and integer-output requirement remain unknown; useful prediction precision must be retained.
 
@@ -31,4 +31,4 @@ The limitations register records evidence, consequence, severity, mitigation, an
 
 ## Gate decision
 
-**PASS — T02 and T03 preprocessing design unlocked.** Critical issues are considered unresolved if any of: malformed CSV rows, normalized URL overlap, negative targets, or invalid dates is nonzero. No EDA chart and no model were produced.
+**PASS — T02 and T03 preprocessing design unlocked.** Critical issues are considered unresolved if any of: malformed CSV rows, normalized URL overlap, negative targets, invalid dates, or Created At dates after the reference is nonzero. Zero targets are valid for RMSLE; missing, negative, or non-finite targets are the relevant target-domain blockers. No EDA chart and no model were produced.
