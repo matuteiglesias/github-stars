@@ -1,0 +1,3 @@
+# Large reproducible row-level outputs are generated locally, not versioned.
+artifacts/generated/modeling/validation_predictions.csv
+artifacts/generated/submission/submission.csv

@@ -1,0 +1,46 @@
+{
+  "model_class": "HistGradientBoostingRegressor",
+  "configuration": {
+    "learning_rate": 0.06,
+    "max_iter": 140,
+    "max_leaf_nodes": 31,
+    "l2_regularization": 2.0
+  },
+  "seed": 202503,
+  "feature_view": "full-contemporaneous",
+  "features": [
+    "log_age",
+    "topic_count",
+    "description_missing",
+    "homepage_present",
+    "Has Issues",
+    "Has Projects",
+    "Has Downloads",
+    "Has Wiki",
+    "Has Pages",
+    "Has Discussions",
+    "Is Fork",
+    "Is Template",
+    "log_size",
+    "log_forks",
+    "log_issues",
+    "log_recency",
+    "Is Archived",
+    "Language",
+    "License",
+    "Default Branch"
+  ],
+  "excluded_variables": [
+    "Stars",
+    "URL",
+    "Name",
+    "Description text",
+    "raw Topics"
+  ],
+  "target_transform": "log1p; expm1 then clip at zero",
+  "validation_strategy": "seeded random 80/20 holdout",
+  "primary_rmsle": 0.5285989045350272,
+  "temporal_robustness_rmsle": 0.552885287929215,
+  "selection_rationale": "lowest primary RMSLE among bounded candidates",
+  "code_version": "source commit at execution: 80a36557835f7dc208bf003537d6399877bd7467"
+}

@@ -1,0 +1,12 @@
+{
+  "valid": true,
+  "columns_exact": true,
+  "row_count_matches": true,
+  "no_null_predictions": true,
+  "finite_predictions": true,
+  "non_negative": true,
+  "name_order_matches": true,
+  "no_accidental_index": true,
+  "prediction_order_method": "positional; no join",
+  "continuous_precision": true
+}

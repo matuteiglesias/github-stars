@@ -1,0 +1,62 @@
+{
+  "seed": 202503,
+  "primary_strategy": "seeded random 80/20 holdout",
+  "fit": {
+    "rows": 120416,
+    "target_min": 167.0,
+    "target_median": 378.0,
+    "target_mean_log1p": 6.219960824579722,
+    "target_max": 298393.0,
+    "age_median_days": 2284.166748046875,
+    "forks_median_log1p": 4.382026672363281,
+    "issues_median_log1p": 2.397895336151123,
+    "size_median_log1p": 7.780303001403809
+  },
+  "validation": {
+    "rows": 30104,
+    "target_min": 167.0,
+    "target_median": 379.0,
+    "target_mean_log1p": 6.225888957017521,
+    "target_max": 256615.0,
+    "age_median_days": 2278.01025390625,
+    "forks_median_log1p": 4.382026672363281,
+    "issues_median_log1p": 2.397895336151123,
+    "size_median_log1p": 7.79276180267334
+  },
+  "temporal_strategy": "oldest 80% fit; newest 20% Created At stress test",
+  "temporal_fit": {
+    "rows": 120416,
+    "target_min": 167.0,
+    "target_median": 390.0,
+    "target_mean_log1p": 6.255036631567882,
+    "target_max": 298393.0,
+    "age_median_days": 2603.63330078125,
+    "forks_median_log1p": 4.488636493682861,
+    "issues_median_log1p": 2.4849066734313965,
+    "size_median_log1p": 7.710205078125
+  },
+  "temporal_validation": {
+    "rows": 30104,
+    "target_min": 167.0,
+    "target_median": 339.0,
+    "target_mean_log1p": 6.0855857290648805,
+    "target_max": 149034.0,
+    "age_median_days": 795.043212890625,
+    "forks_median_log1p": 3.9120230674743652,
+    "issues_median_log1p": 1.945910096168518,
+    "size_median_log1p": 8.070124626159668
+  },
+  "target_bands": [
+    "0\u20139",
+    "10\u201399",
+    "100\u2013999",
+    "1,000\u20139,999",
+    "10,000+"
+  ],
+  "leakage_controls": [
+    "split before learned preprocessing",
+    "raw identity excluded",
+    "no URL overlap",
+    "no target-derived features"
+  ]
+}
