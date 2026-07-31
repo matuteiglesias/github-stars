@@ -1,0 +1,3 @@
+candidate,feature_view,validation_rmsle,absolute_rmsle_gap_vs_full,relative_rmsle_gap_vs_full_pct,submission_candidate
+M2,full-contemporaneous,0.5285989045350272,0.0,0.0,True
+M1,early-information,0.9429217046354926,0.4143228001004654,78.38132023086904,False

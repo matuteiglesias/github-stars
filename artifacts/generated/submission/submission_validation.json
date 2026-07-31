@@ -8,5 +8,10 @@
   "name_order_matches": true,
   "no_accidental_index": true,
   "prediction_order_method": "positional; no join",
-  "continuous_precision": true
+  "continuous_precision": true,
+  "selected_candidate": "M2",
+  "selected_feature_view": "full-contemporaneous",
+  "selected_rmsle_matches_t03": true,
+  "submission_sha256": "cce29e07a6eea1a1fefc72c9134e05bf0f230958e1fc490008d9e550320ad4e8",
+  "prediction_input_sha256": "fb9fb9cd9842d0b6de1cf637b4f029266c3f4e00124225accfa14c87cb31d17c"
 }

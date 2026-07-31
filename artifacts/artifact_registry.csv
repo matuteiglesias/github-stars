@@ -27,8 +27,11 @@ A-303,T03,artifacts/generated/modeling/segment_error.csv,error segmentation,comp
 A-304,T03,artifacts/generated/modeling/split_manifest.json,reproducible validation splits,complete
 A-305,T03,artifacts/generated/modeling/selected_model.json,selected candidate metadata,complete
 A-306,T03,artifacts/generated/memos/T03_closure_memo.md,model selection and gate decision,complete
-A-401,T04,artifacts/generated/submission/submission.csv,challenge submission,planned
-A-402,T04,artifacts/generated/submission/submission_validation.json,submission checks,planned
-A-403,T04,artifacts/generated/policy/sensitivity_comparison.csv,proxy sensitivity,planned
+A-401,T04,artifacts/generated/submission/submission.csv,challenge submission,complete
+A-402,T04,artifacts/generated/submission/submission_validation.json,submission checks,complete
+A-403,T04,artifacts/generated/policy/sensitivity_comparison.csv,proxy sensitivity,complete
+A-404,T04,artifacts/generated/policy/error_interpretation.csv,multiplicative metric interpretation,complete
+A-405,T04,artifacts/generated/policy/implementation_notes.md,reproduction and use instructions,complete
+A-406,T04,artifacts/generated/memos/T04_closure_memo.md,operational readiness and Gate 04 decision,complete
 A-501,T05,artifacts/generated/handoff/human_brief.md,human evidence briefing,planned
 A-502,T05,artifacts/generated/handoff/presentation_evidence_map.csv,claim-to-artifact map,planned
