@@ -1,0 +1,4 @@
+candidate,feature_view,rmsle,median_absolute_log_error,within_2x_pct,within_10x_pct,temporal_rmsle,complexity,leakage_risk,selected,selection_rationale
+M0,training-fold log-target constant,0.9931998590924874,0.6747833801001599,51.444990698910445,96.29949508370981,,constant,low,False,benchmark or not best bounded candidate
+M1,early-information,0.9429217046354926,0.61262348405306,56.39449906989105,97.0801222428913,0.9551774673352345,regularized linear,low,False,benchmark or not best bounded candidate
+M2,full-contemporaneous,0.5285989045350272,0.3295621330321321,83.52046239702365,99.93688546372576,0.552885287929215,bounded nonlinear tree,moderate-close proxies,True,lowest primary RMSLE among bounded candidates

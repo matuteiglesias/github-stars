@@ -21,9 +21,12 @@ A-208,T02,artifacts/generated/eda/topics_language_support.csv,topic-language cel
 A-209,T02,artifacts/generated/eda/lifecycle_summary.csv,age-stratified lifecycle analysis,complete
 A-210,T02,artifacts/generated/eda/feature_drift.csv,train-prediction feature comparison,complete
 A-211,T02,artifacts/generated/memos/T02_closure_memo.md,findings and Gate 02 decision,complete
-A-301,T03,artifacts/generated/modeling/model_comparison.csv,candidate comparison,planned
-A-302,T03,artifacts/generated/modeling/validation_predictions.csv,row-level validation evidence,planned
-A-303,T03,artifacts/generated/modeling/segment_error.csv,error segmentation,planned
+A-301,T03,artifacts/generated/modeling/model_comparison.csv,candidate comparison,complete
+A-302,T03,artifacts/generated/modeling/validation_predictions.csv,row-level validation evidence,generated-locally
+A-303,T03,artifacts/generated/modeling/segment_error.csv,error segmentation,complete
+A-304,T03,artifacts/generated/modeling/split_manifest.json,reproducible validation splits,complete
+A-305,T03,artifacts/generated/modeling/selected_model.json,selected candidate metadata,complete
+A-306,T03,artifacts/generated/memos/T03_closure_memo.md,model selection and gate decision,complete
 A-401,T04,artifacts/generated/submission/submission.csv,challenge submission,planned
 A-402,T04,artifacts/generated/submission/submission_validation.json,submission checks,planned
 A-403,T04,artifacts/generated/policy/sensitivity_comparison.csv,proxy sensitivity,planned
