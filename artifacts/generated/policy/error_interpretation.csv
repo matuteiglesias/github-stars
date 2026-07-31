@@ -1,0 +1,5 @@
+measure,log_value,multiplicative_factor,interpretation
+validation RMSLE,0.5285989045350272,1.6965536090473694,RMS log-error scale expressed as exp(RMSLE); not a per-row guarantee
+median absolute log error,0.3295621330321321,1.3903592027909168,Half of validation predictions have an absolute log error no larger than this factor
+within 2x,0.6931471805599453,2.0,83.5% of validation rows fall within this factor
+within 10x,2.302585092994046,10.0,99.9% of validation rows fall within this factor
