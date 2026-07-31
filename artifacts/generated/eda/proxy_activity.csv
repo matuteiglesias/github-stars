@@ -1,0 +1,10 @@
+record_type,feature,band,count,zero_fraction,spearman_log1p_with_log1p_stars,median_stars,p75_stars,p90_stars,tail_evidence
+overall,Forks,all,150515,0.001036,0.641922,,,,missing=2; invalid_negative=3; top 1% fork cutoff=2533; share of all forks=0.2817
+overall,Issues,all,150520,0.110005,0.347998,,,,missing=0; invalid_negative=0
+fork_band,Forks,0,156,,,416.0,971.0,1052.5,
+fork_band,Forks,1,127,,,256.0,415.5,1033.0,
+fork_band,Forks,2–5,1112,,,215.0,277.0,428.9,
+fork_band,Forks,6–20,13606,,,228.0,301.0,411.0,
+fork_band,Forks,21–100,72913,,,288.0,442.0,704.0,
+fork_band,Forks,101–1k,57334,,,744.0,1557.0,2975.0,
+fork_band,Forks,>1k,5267,,,6715.0,12895.0,23249.0,

@@ -1,0 +1,26 @@
+feature,statistic,train_value,prediction_value,difference_prediction_minus_train,notes
+age_years,p25,3.9179,3.9179,0.0,features only for cross-file comparison
+age_years,median,6.2505,6.245,-0.0055,features only for cross-file comparison
+age_years,p75,8.5969,8.6051,0.0082,features only for cross-file comparison
+age_years,p90,10.7436,10.7488,0.0052,features only for cross-file comparison
+Forks,p25,39.0,39.0,0.0,features only for cross-file comparison
+Forks,median,79.0,78.0,-1.0,features only for cross-file comparison
+Forks,p75,175.0,170.0,-5.0,features only for cross-file comparison
+Forks,p90,414.0,406.0,-8.0,features only for cross-file comparison
+Issues,p25,3.0,3.0,0.0,features only for cross-file comparison
+Issues,median,10.0,10.0,0.0,features only for cross-file comparison
+Issues,p75,28.0,28.0,0.0,features only for cross-file comparison
+Issues,p90,74.0,73.0,-1.0,features only for cross-file comparison
+Size,p25,378.0,376.0,-2.0,features only for cross-file comparison
+Size,median,2396.5,2371.0,-25.5,features only for cross-file comparison
+Size,p75,15234.25,15404.0,169.75,features only for cross-file comparison
+Size,p90,71831.1,71706.8,-124.3,features only for cross-file comparison
+Description,missing_or_invalid_rate,0.037404,0.037235,-0.000169,features only for cross-file comparison
+Language,missing_or_invalid_rate,0.074615,0.075106,0.000491,features only for cross-file comparison
+Is Archived,missing_or_invalid_rate,0.0,0.0,0.0,features only for cross-file comparison
+Topics,missing_or_invalid_rate,0.0,0.0,0.0,features only for cross-file comparison
+Language,prediction_unseen_category_rate,0,0.000527,0.000527,category absent from labeled data
+topic_count,p25,0.0,0.0,0.0,deterministically parsed serialized lists
+topic_count,median,2.0,2.0,0.0,deterministically parsed serialized lists
+topic_count,p75,6.0,6.0,0.0,deterministically parsed serialized lists
+topic_count,p90,10.0,10.0,0.0,deterministically parsed serialized lists
