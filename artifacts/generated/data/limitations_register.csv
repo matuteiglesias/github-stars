@@ -1,0 +1,7 @@
+limitation,evidence,consequence,severity,mitigation,unresolved
+Extraction date is not explicitly supplied,Latest valid Updated At is 2023-09-25,Age uses a proxy rather than authoritative extraction metadata,medium,Fix 2023-09-25 as deterministic reference and reopen if authoritative date appears,yes
+Name may not be a safe entity key,Prediction Name uniqueness=False,Name-only joins can reorder or duplicate predictions,high,Preserve source row order; use normalized URL for audit identity only,bounded
+Contemporaneous proxies are not launch-time features,"Forks, Issues, Updated At, lifecycle fields coexist with Stars",Model associations cannot be interpreted as causal or early forecasts,high,Full snapshot model plus restricted early-information sensitivity,bounded
+No source-repository URL is supplied for forks,Only Is Fork is represented,Fork/source family dependence cannot be directly grouped,medium,Flag Is Fork; avoid raw identity; disclose residual dependence risk,yes
+Cross-file entity overlap,0 normalized URL overlaps,Could contaminate validation or expose target,low,Block if nonzero; otherwise retain automated check,no
+Date parse integrity,0 invalid nonempty date values,Age may be unavailable for affected records,low,Do not silently impute; block if age is materially unrecoverable,no

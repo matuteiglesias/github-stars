@@ -1,14 +1,15 @@
 artifact_id,stage,path,purpose,status
 A-001,T00,memos/T00_closure_memo.md,analytical contract,complete
 A-002,T00,memos/decision_log.md,durable method decisions,complete
-A-101,T01,artifacts/generated/data/file_inventory.csv,raw file inventory,planned
-A-102,T01,artifacts/generated/data/schema_audit.csv,schema and type audit,planned
-A-103,T01,artifacts/generated/data/data_quality_table.csv,quality checks,planned
-A-104,T01,artifacts/generated/data/target_profile.csv,target distribution,planned
-A-105,T01,artifacts/generated/data/duplicate_audit.csv,entity and duplicate audit,planned
-A-106,T01,artifacts/generated/data/temporal_coverage.csv,date coverage and reference date,planned
-A-107,T01,artifacts/generated/data/feature_timing_register.csv,observed feature timing,planned
-A-108,T01,artifacts/generated/data/limitations_register.csv,limitations and mitigations,planned
+A-101,T01,artifacts/generated/data/file_inventory.csv,raw file inventory,complete
+A-102,T01,artifacts/generated/data/schema_audit.csv,schema and type audit,complete
+A-103,T01,artifacts/generated/data/data_quality_table.csv,quality checks,complete
+A-104,T01,artifacts/generated/data/target_profile.csv,target distribution,complete
+A-105,T01,artifacts/generated/data/duplicate_audit.csv,entity and duplicate audit,complete
+A-106,T01,artifacts/generated/data/temporal_coverage.csv,date coverage and reference date,complete
+A-107,T01,artifacts/generated/data/feature_timing_register.csv,observed feature timing,complete
+A-108,T01,artifacts/generated/data/limitations_register.csv,limitations and mitigations,complete
+A-109,T01,artifacts/generated/memos/T01_closure_memo.md,gate decision and audit conclusions,complete
 A-201,T02,artifacts/generated/eda/hypothesis_register.csv,hypothesis status,planned
 A-202,T02,artifacts/generated/eda/finding_register.csv,decision-relevant findings,planned
 A-203,T02,artifacts/generated/figures/topics_language.png,required segment figure,planned

@@ -1,0 +1,69 @@
+check,dataset,result,severity,evidence,implication
+malformed row width,github-repo-data.csv,0,info,0 rows differ from 23 columns,CSV row widths are consistent
+duplicate column names,github-repo-data.csv,0,info,[],None
+accidental index columns,github-repo-data.csv,0,info,[],Exclude if present
+missing/unknown: Name,github-repo-data.csv,1,warning,empty=0; whitespace=0; literal_unknown=1; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Description,github-repo-data.csv,5630,warning,empty=5630; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: URL,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Created At,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Updated At,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Homepage,github-repo-data.csv,95711,warning,empty=95711; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Size,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Stars,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Forks,github-repo-data.csv,2,warning,empty=2; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Issues,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Language,github-repo-data.csv,11231,warning,empty=11231; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: License,github-repo-data.csv,37195,warning,empty=37195; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Topics,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Issues,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Projects,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Downloads,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Wiki,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Pages,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Discussions,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Fork,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Archived,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Template,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Default Branch,github-repo-data.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+updated before created,github-repo-data.csv,0,info,0 rows,Date ordering valid
+negative numeric: Issues,github-repo-data.csv,0,info,minimum=0.0; maximum=20875.0,Range is non-negative
+negative numeric: Stars,github-repo-data.csv,0,info,minimum=167.0; maximum=298393.0,Range is non-negative
+negative numeric: Forks,github-repo-data.csv,3,warning,minimum=-5.0; maximum=142778.0,Review before modeling
+negative numeric: Size,github-repo-data.csv,0,info,minimum=0.0; maximum=104880243.0,Range is non-negative
+malformed repository URL,github-repo-data.csv,0,info,0 nonempty values lack HTTP(S) scheme or host,URL syntax supports identity audit
+malformed row width,github-repo-prediction-set.csv,0,info,0 rows differ from 22 columns,CSV row widths are consistent
+duplicate column names,github-repo-prediction-set.csv,0,info,[],None
+accidental index columns,github-repo-prediction-set.csv,0,info,[],Exclude if present
+missing/unknown: Name,github-repo-prediction-set.csv,3,warning,empty=2; whitespace=0; literal_unknown=1; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Description,github-repo-prediction-set.csv,2403,warning,empty=2402; whitespace=0; literal_unknown=1; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: URL,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Created At,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Updated At,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Homepage,github-repo-prediction-set.csv,40930,warning,empty=40928; whitespace=1; literal_unknown=1; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Size,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Forks,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Issues,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Language,github-repo-prediction-set.csv,4845,warning,empty=4845; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: License,github-repo-prediction-set.csv,15844,warning,empty=15844; whitespace=0; literal_unknown=0; parse_failures=0,Handle explicitly in later pipelines
+missing/unknown: Topics,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Issues,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Projects,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Downloads,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Wiki,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Pages,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Has Discussions,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Fork,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Archived,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Is Template,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+missing/unknown: Default Branch,github-repo-prediction-set.csv,0,info,empty=0; whitespace=0; literal_unknown=0; parse_failures=0,No issue observed
+updated before created,github-repo-prediction-set.csv,0,info,0 rows,Date ordering valid
+negative numeric: Issues,github-repo-prediction-set.csv,0,info,minimum=0.0; maximum=26543.0,Range is non-negative
+negative numeric: Forks,github-repo-prediction-set.csv,0,info,minimum=0.0; maximum=243339.0,Range is non-negative
+negative numeric: Size,github-repo-prediction-set.csv,0,info,minimum=0.0; maximum=105078627.0,Range is non-negative
+malformed repository URL,github-repo-prediction-set.csv,0,info,0 nonempty values lack HTTP(S) scheme or host,URL syntax supports identity audit
+malformed row width,submission-file.csv,0,info,0 rows differ from 1 columns,CSV row widths are consistent
+duplicate column names,submission-file.csv,0,info,[],None
+accidental index columns,submission-file.csv,0,info,[],Exclude if present
+missing/unknown: Name,submission-file.csv,3,warning,empty=2; whitespace=0; literal_unknown=1; parse_failures=0,Handle explicitly in later pipelines
+target-like prediction feature names,github-repo-prediction-set.csv,0,info,[],No direct target-name copy observed
+sample submission Name order,submission-file.csv,True,info,sample_rows=64509; prediction_rows=64509; exact_order_match=True,Preserve prediction row order

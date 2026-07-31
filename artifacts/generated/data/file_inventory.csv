@@ -1,0 +1,4 @@
+file_name,size_bytes,row_count,column_count,inferred_role,sha256
+github-repo-data.csv,48607935,150520,23,labeled training,c7593e74f222a0fd812ba8d54ef53823bd0e3cc9eee9c79cc8124d565e47204d
+github-repo-prediction-set.csv,20788789,64509,22,prediction,fb9fb9cd9842d0b6de1cf637b4f029266c3f4e00124225accfa14c87cb31d17c
+submission-file.csv,888065,64509,1,sample submission,e0244bba5ad4ae6c7a615684008c41793d37d1541d2af6d07a58de410c2e1658

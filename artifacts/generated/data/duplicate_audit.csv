@@ -1,0 +1,19 @@
+dataset_a,dataset_b,check,count,severity,evidence,handling_rule
+github-repo-data.csv,github-repo-data.csv,exact duplicate rows,0,info,all-column equality,No action
+github-repo-data.csv,github-repo-data.csv,duplicate URLs,0,info,exact nonempty URL,No action
+github-repo-data.csv,github-repo-data.csv,duplicate normalized URLs,0,info,case/trailing slash/.git normalized,No action
+github-repo-data.csv,github-repo-data.csv,duplicate names,10449,warning,Name is not assumed to be identity,Use URL/row position; investigate conflicts
+github-repo-data.csv,github-repo-data.csv,same normalized name under multiple URLs,7007,warning,normalized Name groups mapped to >1 normalized URL,Never join on Name alone
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,exact duplicate rows,0,info,all-column equality,No action
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,duplicate URLs,0,info,exact nonempty URL,No action
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,duplicate normalized URLs,0,info,case/trailing slash/.git normalized,No action
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,duplicate names,2702,warning,Name is not assumed to be identity,Use URL/row position; investigate conflicts
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,same normalized name under multiple URLs,2135,warning,normalized Name groups mapped to >1 normalized URL,Never join on Name alone
+submission-file.csv,submission-file.csv,exact duplicate rows,2703,warning,all-column equality,Use URL/row position; investigate conflicts
+submission-file.csv,submission-file.csv,duplicate URLs,0,info,exact nonempty URL,No action
+submission-file.csv,submission-file.csv,duplicate normalized URLs,0,info,case/trailing slash/.git normalized,No action
+submission-file.csv,submission-file.csv,duplicate names,2702,warning,Name is not assumed to be identity,Use URL/row position; investigate conflicts
+github-repo-data.csv,github-repo-prediction-set.csv,cross-file normalized URL overlap,0,info,set intersection only; values withheld,Preserve prediction row position; never join on Name alone
+github-repo-data.csv,github-repo-prediction-set.csv,cross-file normalized Name overlap,5958,warning,set intersection only; values withheld,Preserve prediction row position; never join on Name alone
+github-repo-data.csv,github-repo-data.csv,same URL with conflicting metadata / snapshot clue,0,info,normalized URL groups with >1 distinct non-target record,No action
+github-repo-prediction-set.csv,github-repo-prediction-set.csv,same URL with conflicting metadata / snapshot clue,0,info,normalized URL groups with >1 distinct non-target record,No action

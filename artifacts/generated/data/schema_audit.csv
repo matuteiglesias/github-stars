@@ -1,0 +1,47 @@
+dataset,variable,inferred_dtype,null_count,null_rate,unique_count,parse_failures,sample_safe_summary
+github-repo-data.csv,Name,string,0,0.0,140071,0,nonempty=150520; unknown_literals=1; whitespace_only=0
+github-repo-data.csv,Description,string,5630,0.03740367,144419,0,nonempty=144890; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,URL,string,0,0.0,150520,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Created At,datetime,0,0.0,150473,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Updated At,datetime,0,0.0,138966,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Homepage,string,95711,0.63586899,52448,0,nonempty=54809; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Size,numeric,0,0.0,45867,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Stars,numeric,0,0.0,8915,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Forks,numeric,2,1.329e-05,3597,0,nonempty=150518; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Issues,numeric,0,0.0,1254,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Language,string,11231,0.07461467,342,0,nonempty=139289; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,License,string,37195,0.24711002,44,0,nonempty=113325; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Topics,list-like string,0,0.0,77538,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Issues,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Projects,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Downloads,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Wiki,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Pages,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Has Discussions,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Is Fork,boolean,0,0.0,1,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Is Archived,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Is Template,boolean,0,0.0,2,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-data.csv,Default Branch,string,0,0.0,1730,0,nonempty=150520; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Name,string,2,3.1e-05,61806,0,nonempty=64507; unknown_literals=1; whitespace_only=0
+github-repo-prediction-set.csv,Description,string,2402,0.03723511,62008,0,nonempty=62107; unknown_literals=1; whitespace_only=0
+github-repo-prediction-set.csv,URL,string,0,0.0,64509,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Created At,datetime,0,0.0,64495,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Updated At,datetime,0,0.0,62057,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Homepage,string,40928,0.63445411,23006,0,nonempty=23581; unknown_literals=1; whitespace_only=1
+github-repo-prediction-set.csv,Size,numeric,0,0.0,25703,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Forks,numeric,0,0.0,2506,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Issues,numeric,0,0.0,915,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Language,string,4845,0.0751058,265,0,nonempty=59664; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,License,string,15844,0.24560914,41,0,nonempty=48665; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Topics,list-like string,0,0.0,33355,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Issues,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Projects,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Downloads,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Wiki,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Pages,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Has Discussions,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Is Fork,boolean,0,0.0,1,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Is Archived,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Is Template,boolean,0,0.0,2,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+github-repo-prediction-set.csv,Default Branch,string,0,0.0,863,0,nonempty=64509; unknown_literals=0; whitespace_only=0
+submission-file.csv,Name,string,2,3.1e-05,61806,0,nonempty=64507; unknown_literals=1; whitespace_only=0

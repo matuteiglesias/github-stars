@@ -1,0 +1,24 @@
+variable,observed_dtype,semantic_role,timing_class,production_use,sensitivity_use,leakage_risk,notes
+Created At,datetime,timestamp,pre-decision,derived only,derived age/date,fixed reference date required,Classification applies to contemporaneous snapshot decision moment
+Default Branch,string,category,available-during-decision,candidate,candidate if timing defensible,may change after creation,Classification applies to contemporaneous snapshot decision moment
+Description,string,free text,available-during-decision,candidate,candidate,high dimensionality and missingness,Classification applies to contemporaneous snapshot decision moment
+Forks,numeric,count,available-during-decision,candidate in full model,exclude,close popularity proxy,Classification applies to contemporaneous snapshot decision moment
+Has Discussions,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Has Downloads,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Has Issues,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Has Pages,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Has Projects,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Has Wiki,boolean,boolean,available-during-decision,candidate in full model,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Homepage,string,URL/text,available-during-decision,derived only,candidate presence flag,external resolution prohibited,Classification applies to contemporaneous snapshot decision moment
+Is Archived,boolean,boolean,available-during-decision,candidate in full model,exclude,late lifecycle state,Classification applies to contemporaneous snapshot decision moment
+Is Fork,boolean,boolean,available-during-decision,candidate,candidate,source relationship not directly supplied,Classification applies to contemporaneous snapshot decision moment
+Is Template,boolean,boolean,available-during-decision,candidate,candidate if timing defensible,configuration can change,Classification applies to contemporaneous snapshot decision moment
+Issues,numeric,count,available-during-decision,candidate in full model,exclude,community-activity proxy,Classification applies to contemporaneous snapshot decision moment
+Language,string,category,available-during-decision,candidate,candidate,rare categories and missingness,Classification applies to contemporaneous snapshot decision moment
+License,string,category,available-during-decision,candidate,candidate if timing defensible,may change after creation,Classification applies to contemporaneous snapshot decision moment
+Name,string,identity/text,available-during-decision,restricted lexical only,sensitivity candidate,identity memorization; unsafe join unless unique,Classification applies to contemporaneous snapshot decision moment
+Size,numeric,count,available-during-decision,candidate in full model,exclude,snapshot-derived and heavy-tailed,Classification applies to contemporaneous snapshot decision moment
+Stars,numeric,target,generated-after-decision,exclude,exclude,direct target,Classification applies to contemporaneous snapshot decision moment
+Topics,list-like string,list-like category,available-during-decision,candidate,candidate,parsing and rare-value risk,Classification applies to contemporaneous snapshot decision moment
+URL,string,identity,available-during-decision,identity only,exclude,target recovery and memorization,Classification applies to contemporaneous snapshot decision moment
+Updated At,datetime,timestamp,available-during-decision,candidate in full model,exclude,post-creation lifecycle proxy,Classification applies to contemporaneous snapshot decision moment
